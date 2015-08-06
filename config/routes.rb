@@ -16,4 +16,7 @@ Rails.application.routes.draw do
     end
   end
 
+  #route for sign-up wizard
+  resources :after_signup
+
 end
