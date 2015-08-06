@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  # Sets up whitelist for devise attributes across
+  # all authentication points
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_in) do |u|
       u.permit(:username,
