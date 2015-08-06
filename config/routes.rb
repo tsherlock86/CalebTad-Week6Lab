@@ -4,19 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  authenticated :user do
-    devise_scope :user do
-      root to: "devise/posts#show", as: :user_timeline
-    end
-  end
-
-  unauthenticated do
-    devise_scope :user do
-      root to: "devise/sessions#new"
-    end
-  end
-
   #route for sign-up wizard
   resources :after_signup
+
+  root 'static_pages#home'
 
 end
