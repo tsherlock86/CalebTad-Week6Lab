@@ -6,20 +6,16 @@ class AfterSignupController < ApplicationController
   #defining the show field for first step
   #user can only skip on avatar/bio page
   def show
-  @user = current_user
-  case step
-  when :avatar
-    skip_step if @user.avatar.blank?
+    @user = current_user
+    render_wizard
   end
-  render_wizard
- end
 
- #defining view for updates
- def update
-   @user = current_user
-   @user.attributes = params[:user]
-   render_wizard @user
- end
+  # defining view for updates
+  def update
+    @user = current_user
+    @user.attributes = params[:user]
+    render_wizard @user
+  end
 
 
 
