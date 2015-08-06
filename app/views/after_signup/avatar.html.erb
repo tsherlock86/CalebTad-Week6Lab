@@ -1,1 +1,8 @@
-<%= link_to 'skip', next_wizard_path %>
+<h1>Time to setup your Photo and Biography</h1>
+<%= bootstrap_form_for(@user, :url => wizard_path, :method => :put) do |f| %>
+  <%= f.text_field :avatar, :placeholder => "Avatar" %>
+  <%= f.submit :bio , :placeholder => "Biography" %>
+  <%= f.submit 'Finish Profile', :class => 'btn btn-primary' %>
+<% end %>
+
+<%= link_to 'skip', posts_path %>
