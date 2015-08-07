@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'profiles/:username' => 'profiles#index'
+
   resources :posts
 
   devise_for :users, controllers: {

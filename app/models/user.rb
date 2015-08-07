@@ -7,4 +7,9 @@ class User < ActiveRecord::Base
   has_many :posts
   validates_uniqueness_of :username
   validates_uniqueness_of :email
+
+
+  def to_params
+    username
+  end
 end
