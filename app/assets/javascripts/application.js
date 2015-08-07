@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery.infinitescroll
+//= require jquery.infinite-pages
 //= require jquery_ujs
 // require turbolinks
 //= require bootstrap
@@ -22,12 +24,5 @@ $(document).ready(function() {
   $('.new-squawk').click(function() {
     $('.new-squawk-form').toggle();
   });
-
-
-
-
-
-
-
 
 });
