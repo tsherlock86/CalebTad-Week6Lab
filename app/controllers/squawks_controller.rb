@@ -4,7 +4,8 @@ class SquawksController < ApplicationController
   # GET /squawks
   # GET /squawks.json
   def index
-    # @squawks = current_user.all_following.squawks
+    @squawks = Squawk.timeline(current_user)
+    @squawk = Squawk.new
   end
 
   # GET /squawks/1
@@ -28,7 +29,7 @@ class SquawksController < ApplicationController
 
     respond_to do |format|
       if @squawk.save
-        format.html { redirect_to @squawk, notice: 'squawk was successfully created.' }
+        format.html { redirect_to :back, notice: 'squawk was successfully created.' }
         format.json { render :show, status: :created, location: @squawk }
       else
         format.html { render :new }

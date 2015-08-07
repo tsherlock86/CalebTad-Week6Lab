@@ -1,5 +1,9 @@
+<div class="col-xs-3">
+  <%= render partial: 'homeprofile', locals: { user: current_user } %>
+</div>
+
 <div class="container">
-  <div class="col-xs-6 col-xs-offset-3">
+  <div class="col-xs-6">
     <%= render partial: 'squawk', collection: @squawks %>
   </div>
 </div>

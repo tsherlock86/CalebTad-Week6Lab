@@ -42,10 +42,19 @@ html, body {
 }
 
 .top-border+.top-border {
-	border-top: 1px solid #888;
-	margin-top: 5px;
+	margin-top: 30px;
 }
 
 .light-text {
 	color: #888;
+}
+
+.new-squawk-form {
+	margin-bottom: 50px;
+	height: 170px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+	text-align: center;
+	border-radius: 8px;
 }
