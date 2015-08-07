@@ -1,4 +1,4 @@
-10.times do
+100.times do
   user = User.create(email: Faker::Internet.email,
               username: Faker::Internet.user_name,
               first_name: Faker::Name.first_name,

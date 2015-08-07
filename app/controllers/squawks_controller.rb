@@ -4,7 +4,7 @@ class SquawksController < ApplicationController
   # GET /squawks
   # GET /squawks.json
   def index
-    # @squawks = current_user.all_following.squawks
+     @squawks = Squawk.order(:created_at).page(params[:page])
   end
 
   # GET /squawks/1
