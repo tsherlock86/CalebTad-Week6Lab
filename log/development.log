@@ -124,3 +124,29 @@ DEPRECATION WARNING: `#timestamps` was called without specifying an option for `
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mFollow Load (0.2ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?  [["follower_id", 2], ["follower_type", "User"], ["blocked", "f"]]
   [1m[36mFollow Load (0.1ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?[0m  [["follower_id", 2], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mFollow Load (0.3ms)[0m  SELECT  "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."followable_id" = ? AND "follows"."followable_type" = ? LIMIT 1  [["follower_id", 1], ["follower_type", "User"], ["followable_id", 2], ["followable_type", "User"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "follows" ("followable_id", "followable_type", "follower_id", "follower_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["followable_id", 2], ["followable_type", "User"], ["follower_id", 1], ["follower_type", "User"], ["created_at", "2015-08-07 14:28:34.376354"], ["updated_at", "2015-08-07 14:28:34.376354"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mFollow Load (0.2ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?  [["follower_id", 2], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[36mFollow Load (0.1ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?[0m  [["follower_id", 2], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[35mFollow Load (0.1ms)[0m  SELECT  "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."followable_id" = ? AND "follows"."followable_type" = ? LIMIT 1  [["follower_id", 1], ["follower_type", "User"], ["followable_id", 2], ["followable_type", "User"]]
+  [1m[36mFollow Load (0.1ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?[0m  [["follower_id", 1], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mFollow Load (0.1ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?[0m  [["follower_id", 1], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mFollow Load (0.1ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?[0m  [["follower_id", 1], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (2)
+  [1m[36mFollow Load (0.1ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?[0m  [["follower_id", 2], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[35mFollow Load (0.1ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?  [["follower_id", 2], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[36mFollow Load (0.1ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?[0m  [["follower_id", 2], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[35mFollow Load (0.1ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = ? AND "follows"."follower_type" = ? AND "follows"."blocked" = ?  [["follower_id", 1], ["follower_type", "User"], ["blocked", "f"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2)[0m
+  [1m[35mFollow Load (0.2ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."followable_id" = ? AND "follows"."followable_type" = ? AND "follows"."blocked" = ?  [["followable_id", 2], ["followable_type", "User"], ["blocked", "f"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mFollow Load (0.1ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."followable_id" = ? AND "follows"."followable_type" = ? AND "follows"."blocked" = ?  [["followable_id", 2], ["followable_type", "User"], ["blocked", "f"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
