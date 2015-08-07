@@ -15,6 +15,7 @@ gem 'bootstrap-sass'
 gem "acts_as_follower"
 gem 'wicked'
 gem 'devise'
+gem 'faker', '~> 1.4.3'
 
 group :development, :test do
   gem 'byebug'
