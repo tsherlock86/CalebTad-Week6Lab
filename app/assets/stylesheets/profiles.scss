@@ -4,6 +4,13 @@ body
     font-family: 'Open Sans', sans-serif;
 }
 
+.fb-profile-text>h1{
+    font-weight: 700;
+    font-size:16px;
+    padding-left: 200px !important;
+}
+
+
 .fb-profile img.fb-image-lg{
     z-index: 0;
     width: 100%;
@@ -23,6 +30,8 @@ body
 .fb-profile-text>h1{
     font-weight: 700;
     font-size:16px;
+    float:left;
+    margin-left:  20px !important;
 }
 
 .fb-image-profile

@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
   validates_uniqueness_of :email
 
-  # acts_as_followable
-  # acts_as_follower
+  acts_as_followable
+  acts_as_follower
 
 end
