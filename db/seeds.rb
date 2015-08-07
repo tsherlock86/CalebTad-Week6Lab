@@ -6,4 +6,4 @@ testuser = User.create(email: "test@user.com",
             password_confirmation: "password",
             bio: "I am a test user.")
 
-testuser.posts << Post.create(body: "This post belongs to test user.")            
+testuser.squawks << Squawk.create(body: "This post belongs to test user.")            
