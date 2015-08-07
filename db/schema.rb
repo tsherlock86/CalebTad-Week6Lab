@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806190616) do
+ActiveRecord::Schema.define(version: 20150807140039) do
 
-  create_table "posts", force: :cascade do |t|
+  create_table "squawks", force: :cascade do |t|
     t.text     "body"
     t.integer  "user_id"
     t.datetime "created_at", null: false
