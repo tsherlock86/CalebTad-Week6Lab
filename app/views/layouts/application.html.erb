@@ -20,27 +20,28 @@
             <% if user_signed_in? %>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
             <% else %>
-              <li><%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %></li>
               <li><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %></li>
             <% end %>
           </ul>
         </div>
-
       </div>
     </nav>
+
+
     <% if flash[:error] %>
       <p class='error'><%=h flash[:error] %></p>
     <% end %>
     <% if flash[:notice] %>
       <p class='notice'><%=h flash[:notice] %></p>
     <% end %>
-
-    <%= yield %>
-    <div class="footer"></div>
+    <div class="container">
+      <%= yield %>
+    </div>
+    
   </div>
 
 
-  <!-- <div class="footer"></div> -->
+  <div class="footer"></div>
 
 </body>
 </html>
