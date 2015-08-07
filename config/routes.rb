@@ -20,13 +20,11 @@ Rails.application.routes.draw do
 
   unauthenticated do
     devise_scope :user do
-      root to: "devise/sessions#new"
+      root to: "static_pages#home"
     end
   end
 
   #route for sign-up wizard
   resources :after_signup
-
-  root 'static_pages#home'
 
 end
