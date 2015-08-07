@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   authenticated :user do
     devise_scope :user do
-      root to: "devise/posts#show", as: :user_timeline
+      root to: "posts#show", as: :user_timeline
     end
   end
 
