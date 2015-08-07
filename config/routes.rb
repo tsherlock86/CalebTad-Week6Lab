@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :posts
+  resources :squawks
 
   devise_for :users, controllers: {
     confirmations: 'users/confirmations',
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   authenticated :user do
     devise_scope :user do
-      root to: "posts#show", as: :user_timeline
+      root to: "squawks#index", as: :user_timeline
     end
   end
 
