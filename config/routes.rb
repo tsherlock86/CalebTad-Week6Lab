@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   get 'profiles/:username' => 'profiles#index'
-  
+  post 'profiles/follow' => 'profiles#follow'
+  post 'profiles/unfollow' => 'profiles#unfollow'
+
+
   resources :squawks
 
   devise_for :users, controllers: {
