@@ -16,17 +16,23 @@
 @import "bootstrap";
 @import "profiles";
 
-$footer-height: 80px;
 // Sticky footer
 html, body {
 	height: 100%;
 }
 .wrapper {
-  height: 100%;
-	margin: 0 auto -$footer-height;
+  min-height: 100%;
+	margin-bottom: -80px;
 }
+
+.wrapper:after {
+  content: "";
+  display: block;
+	height: 80px;
+}
+
 .footer {
-	height: $footer-height;
+ 	height: 80px;
   background-color: #888;
 }
 
