@@ -12,14 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :maxlength => "170" %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Make Squawk" %>
   </div>
 <% end %>
