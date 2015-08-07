@@ -181,10 +181,7 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-<<<<<<< HEAD
 
 BUNDLED WITH
    1.10.5
-=======
   wicked
->>>>>>> c3ef07338381db2b760eb667f49072ff6858a655
