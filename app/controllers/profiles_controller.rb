@@ -1,23 +1,23 @@
 class ProfilesController < ApplicationController
 
   def index
-    @squawks = Squawk.all
     @user = User.find_by "username = ?", params[:username]
+    @squawks = @user.squawks
   end
 
   def follow
-  @user = User.find_by "username = ?", params[:username]
+    @user = User.find_by "username = ?", params[:username]
 
-   if current_user
-     if current_user == @user
-       flash[:error] = "You cannot follow yourself."
-     else
-       current_user.follow(@user)
-       flash[:notice] = "You are now following #{@user.username}."
-     end
-   else
-     flash[:error] = "You must Sign In to follow #{@user.username}."
-   end
+    if current_user
+      if current_user == @user
+        flash[:error] = "You cannot follow yourself."
+      else
+        current_user.follow(@user)
+        flash[:notice] = "You are now following #{@user.username}."
+      end
+    else
+      flash[:error] = "You must Sign In to follow #{@user.username}."
+    end
   end
 
   def unfollow

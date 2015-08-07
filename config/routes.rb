@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'profiles/:username' => 'profiles#index'
+  get 'profiles/:username' => 'profiles#index', as: :profile_view
   post 'profiles/follow' => 'profiles#follow'
   post 'profiles/unfollow' => 'profiles#unfollow'
 
