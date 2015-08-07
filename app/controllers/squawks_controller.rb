@@ -4,7 +4,7 @@ class SquawksController < ApplicationController
   # GET /squawks
   # GET /squawks.json
   def index
-    # @squawks = current_user.all
+    @squawks = Squawk.all
   end
 
   # GET /squawks/1
