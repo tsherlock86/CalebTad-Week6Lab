@@ -2,15 +2,14 @@
 <div class="container">
   <div class="clearfix">
     <div class="fb-profile">
-      <img align="left" class="fb-image-lg" src="http://lorempixel.com/850/280/nightlife/5/" alt="Profile image example"/>
-        <div class="col-xs-12">
+        <div class="col-xs-9">
           <img align="left" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example"/>
         </div>
     </div>
   </div>
-  <div class="col-xs-3 col-xs-offset-1">
-  <%= @user.username %><br>
-  <%= @user.bio %>
-  <%= button_to "Follow",  :class => "btn btn-primary", :method => :post,   %><br />
+  <div class="col-xs-6 pull-left">
+    <%= @user.username %><br>
+    <%= @user.bio %>
+    <%= button_to "Follow",  :class => "btn btn-primary btn-sm", :method => :post %><br/>
   </div>
 </div>

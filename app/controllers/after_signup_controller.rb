@@ -17,12 +17,12 @@ class AfterSignupController < ApplicationController
     render_wizard @user
   end
 
-  def upload
-    uploaded_io = params[:user][:profile_photo]
-    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-      file.write(uploaded_io.read)
-    end
-  end
+  # def upload
+  #   uploaded_io = params[:user][:profile_photo]
+  #   File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+  #     file.write(uploaded_io.read)
+  #   end
+  # end
 
   def after_signup_params
     params.require(:user).permit(:first_name, :last_name, :username, :avatar, :profile_photo)
