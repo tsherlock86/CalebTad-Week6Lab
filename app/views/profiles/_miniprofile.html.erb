@@ -1,0 +1,30 @@
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<div class="row">
+  <%= image_tag(@user.avatar, :class => "squawk-image") %>
+</div>
+
+<div class="row">
+    <p><%= @user.first_name %><p>
+    <p><%= @user.username %><p>
+    <p><%= @user.bio %><p>
+</div>
+
+<div class="row">
+
+  <div class="col-xs-4">
+
+  </div>
+
+  <div class="col-xs-4">
+
+  </div>
+
+
+  <div class="col-xs-4">
+
+  </div>
+</div>
+
+<div class="row">
+    <%= button_to "Follow",  :class => "btn btn-primary btn-sm", :method => :post %><br/>
+</div>
