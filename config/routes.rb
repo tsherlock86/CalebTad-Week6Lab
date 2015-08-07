@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     unlocks: 'users/unlocks'
   }
 
+
   authenticated :user do
     devise_scope :user do
       root to: "posts#show", as: :user_timeline
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
   unauthenticated do
     devise_scope :user do
-      root to: "devise/sessions#new"
+      root to: "static_pages#home"
     end
   end
 
