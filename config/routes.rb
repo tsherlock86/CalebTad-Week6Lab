@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   get 'profiles/:username' => 'profiles#index', as: :profile_view
-  post 'profiles/follow' => 'profiles#follow'
-  post 'profiles/unfollow' => 'profiles#unfollow'
+  post 'profiles/:username/follow' => 'profiles#follow', as: :follow
+  post 'profiles/:username/unfollow' => 'profiles#unfollow', as: :unfollow
 
 
   resources :squawks
