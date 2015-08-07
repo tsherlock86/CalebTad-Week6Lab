@@ -1,16 +1,11 @@
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-      <% @user.try(:username) %>
-      <% @user.try(:bio) %>
-
-
-
-
-
-
-
-
+    <div class="fb-profile">
+        <img align="left" class="fb-image-lg" src="http://lorempixel.com/850/280/nightlife/5/" alt="Profile image example"/>
+        <img align="left" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example"/>
+        <div class="fb-profile-text">
+            <h1><%= @user.username %></h1>
+            <p><%= @user.bio %></p>
+        </div>
     </div>
-  </div>
-</div>
+</div> 
