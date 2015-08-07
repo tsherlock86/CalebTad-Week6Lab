@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
 
   def index
     @squawks = Squawk.all
-    @user = current_user
+    @user = User.find_by "username = ?", params[:username]
   end
 
 

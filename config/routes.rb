@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
   get 'profiles/:username' => 'profiles#index'
-
-  resources :posts
-=======
+  
   resources :squawks
->>>>>>> df77b0f1c6d081bd8e60fb378796ad148b0f16e5
 
   devise_for :users, controllers: {
     confirmations: 'users/confirmations',
