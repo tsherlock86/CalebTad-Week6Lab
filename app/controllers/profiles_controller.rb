@@ -3,7 +3,6 @@ class ProfilesController < ApplicationController
 
   def index
     @squawks = @user.squawks.order("created_at DESC")
-    @squawk = Squawk.new
   end
 
   def follow

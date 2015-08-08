@@ -22,7 +22,7 @@
               <li><%= link_to "Profile", profile_view_path(username: current_user.username) %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
             <% else %>
-              <li><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path(current_user), :class => 'navbar-link' %></li>
             <% end %>
           </ul>
         </div>
@@ -48,12 +48,9 @@
           <p class='notice'><%=h flash[:notice] %></p>
         <% end %>
       </div>
-
       <%= yield %>
-
     </div>
-
-  </div>
+  </div> <!-- end .wrapper -->
 
 
   <div class="footer"></div>

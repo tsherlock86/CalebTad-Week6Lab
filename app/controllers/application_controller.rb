@@ -4,8 +4,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   # before_action :authenticate_user!
+  before_action :new_squawk
 
   protected
+
+  # Create a new squawk for every page
+  # So that a user can always create a new squawk
+  def new_squawk
+    @new_squawk = Squawk.new
+  end
 
   # Sets up whitelist for devise attributes across
   # all authentication points
