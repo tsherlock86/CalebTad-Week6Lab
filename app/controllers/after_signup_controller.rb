@@ -25,11 +25,11 @@ class AfterSignupController < ApplicationController
   # end
 
   def after_signup_params
-    params.require(:user).permit(:first_name, :last_name, :username, :avatar, :profile_photo)
+    params.require(:user).permit(:first_name, :last_name, :username, :avatar)
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :username, :avatar, :profile_photo)
+    params.require(:user).permit(:first_name, :last_name, :username, :avatar)
   end
 
 

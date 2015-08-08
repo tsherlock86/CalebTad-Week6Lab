@@ -15,6 +15,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "profiles";
+@import "font-awesome";
 
 // Sticky footer
 html, body {
@@ -62,4 +63,8 @@ html, body {
 .dark {
 	background-color: #333;
 	opacity: 0.7;
+
+.fa-3x {
+	margin-right: 5px !important;
+	margin-top: 3px !important;
 }
