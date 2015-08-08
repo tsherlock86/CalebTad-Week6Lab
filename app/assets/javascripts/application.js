@@ -12,8 +12,8 @@
 //
 //= require jquery.infinitescroll
 //= require jquery.infinite-pages
-//= require jquery_ujs
 //= require bootstrap
+//= require jquery_ujs
 //= require jquery
 //= require_tree .
 

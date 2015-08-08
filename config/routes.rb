@@ -16,10 +16,10 @@ Rails.application.routes.draw do
     unlocks: 'users/unlocks'
   }
 
-
   authenticated :user do
     devise_scope :user do
       root to: "squawks#index", as: :user_timeline
+      get '/signout', to: 'devise/sessions#destroy', as: :signout
     end
   end
 
