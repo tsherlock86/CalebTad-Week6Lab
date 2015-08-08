@@ -12,11 +12,11 @@
 //
 //= require jquery.infinitescroll
 //= require jquery.infinite-pages
-//= require jquery_ujs
-// require turbolinks
 //= require bootstrap
+//= require jquery_ujs
 //= require jquery
 //= require_tree .
+
 $(document).ready(function() {
 
   // New squawk form

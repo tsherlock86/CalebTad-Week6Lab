@@ -19,3 +19,11 @@ User.create(email: "test@user.com",
             password: "password",
             password_confirmation: "password",
             bio: "I am a test user.")
+
+User.create(email: "secondtest@user.com",
+            username: "secondtestuser",
+            first_name: "secondtest",
+            last_name: "user",
+            password: "password",
+            password_confirmation: "password",
+            bio: "I am a second test user.")
