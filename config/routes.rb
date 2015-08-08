@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'profiles/:username' => 'profiles#index', as: :profile_view
   post 'profiles/:username/follow' => 'profiles#follow', as: :follow
   post 'profiles/:username/unfollow' => 'profiles#unfollow', as: :unfollow
+  post 'profiles/:username/block' => 'profiles#block', as: :block
+  post 'profiles/:username/unblock' => 'profiles#unblock', as: :unblock
 
 
   resources :squawks

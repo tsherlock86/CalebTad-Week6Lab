@@ -31,6 +31,36 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def block
+    if current_user
+      if current_user == @user
+        flash[:error] = "You cannot block yourself."
+        redirect_to :back
+      else
+        current_user.block(@user)
+        flash[:notice] = "You have now blocked #{@user.username}."
+        # Stop following a user that you block
+        if @user.followed_by?(current_user)
+          current_user.stop_following(@user)
+        end
+        redirect_to :back
+      end
+    else
+      flash[:error] = "You must Sign In to block #{@user.username}."
+      redirect_to :back
+    end
+  end
+
+  def unblock
+    if current_user
+      current_user.unblock(@user)
+      flash[:notice] = "You have unblocked #{@user.username}."
+      redirect_to :back
+    else
+      flash[:error] = "You must sign in to unblock #{@user.username}."
+    end
+  end
+
   private
 
   def set_user
