@@ -1,0 +1,21 @@
+<div class="row text-center">
+  <%= image_tag(user.avatar, :class => "squawk-image") %>
+</div>
+
+<div class="row text-center">
+    <p><%= user.first_name %><p>
+    <p><%= user.username %><p>
+    <p><%= user.bio %><p>
+</div>
+
+<div class="row text-center">
+  <div class="col-xs-4 text-center">
+    <p><%= user.squawks.count %></p>
+  </div>
+  <div class="col-xs-4 text-center">
+    <p>Following <%= user.follows.count %></p>
+  </div>
+  <div class="col-xs-4 text-center">
+    <p>Followers <%= user.followers.count %></p>
+  </div>
+</div>

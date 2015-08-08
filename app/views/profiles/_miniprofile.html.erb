@@ -1,30 +1,29 @@
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<div class="row">
+<div class="row text-center">
   <%= image_tag(@user.avatar, :class => "squawk-image") %>
 </div>
 
-<div class="row">
+<div class="row text-center">
     <p><%= @user.first_name %><p>
     <p><%= @user.username %><p>
     <p><%= @user.bio %><p>
 </div>
 
-<div class="row">
-
-  <div class="col-xs-4">
-
+<div class="row text-center">
+  <div class="col-xs-4 text-center">
+    <p>Squawks<br /><%= @user.squawks.count %></p>
   </div>
-
-  <div class="col-xs-4">
-
+  <div class="col-xs-4 text-center">
+    <p>Following <%= @user.follows.count %></p>
   </div>
-
-
-  <div class="col-xs-4">
-
+  <div class="col-xs-4 text-center">
+    <p>Followers <%= @user.followers.count %></p>
   </div>
 </div>
 
-<div class="row">
-    <%= button_to "Follow", follow_path, :class => "btn btn-primary btn-sm", :method => :post %><br/>
+<div class="row text-center">
+  <% if current_user.following?(@user) %>
+    <%= button_to "Unfollow", unfollow_path, :class => "btn btn-primary btn-sm", :method => :post %>
+  <% else %>
+    <%= button_to "Follow", follow_path, :class => "btn btn-primary btn-sm", :method => :post %>
+  <% end %>
 </div>

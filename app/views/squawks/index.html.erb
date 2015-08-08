@@ -1,10 +1,14 @@
-<div class="infinite-table"
-<div class="container">
-  <div class="col-xs-6">
-    <%= render partial: 'squawk', collection: @squawks %>
-    <div class="btn-group">
-    <span><%= paginate @squawks %></span>
-  </div>
-  </div>
+<div class="col-xs-3">
+  <%= render partial: 'homeprofile', locals: { user: current_user } %>
 </div>
+
+<div class="infinite-table">
+  <div class="container">
+    <div class="col-xs-6">
+      <%= render partial: 'squawk', collection: @squawks %>
+      <div class="btn-group">
+      <span><%= paginate @squawks %></span>
+    </div>
+    </div>
+  </div>
 </div>
