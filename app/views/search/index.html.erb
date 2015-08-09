@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <% @squawks.each do |squawk| %>
+      <% if squawk.body.downcase.include?(params[:search_item]) %>
+        <%= render partial: '/squawks/squawk', locals: { squawk: squawk } %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

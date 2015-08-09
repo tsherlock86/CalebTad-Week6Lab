@@ -7,9 +7,13 @@
               password_confirmation: "password",
               avatar: Faker::Avatar.image,
               bio: Faker::Lorem.sentence(5))
+
   5.times do
-    user.squawks << Squawk.create(body: Faker::Lorem.sentence(9))
+    squawk = Squawk.create(body: Faker::Lorem.sentence(5))
+    squawk.created_at = Faker::Time.between(1000.days.ago, DateTime.now)
+    user.squawks << squawk
   end
+
 end
 
 User.create(email: "test@user.com",
