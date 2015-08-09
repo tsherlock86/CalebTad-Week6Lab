@@ -4,7 +4,7 @@ class SquawksController < ApplicationController
   # GET /squawks
   # GET /squawks.json
   def index
-    @squawks = Squawk.timeline(current_user).order(:created_at).page(params[:page])
+    @squawks = Squawk.timeline(current_user).page(params[:page])
     @who_to_follow = User.all.sample(3)
   end
 
