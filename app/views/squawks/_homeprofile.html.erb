@@ -1,5 +1,5 @@
 <div class="row text-center">
-  <%= image_tag(user.avatar, :class => "squawk-image") %>
+  <%= image_tag(user.try(:avatar) || 'image1.jpg', :class => "squawk-image") %>
 </div>
 
 <div class="row text-center">
@@ -10,12 +10,12 @@
 
 <div class="row text-center">
   <div class="col-xs-4 text-center">
-    <p>Squawks<br /><%= user.squawks.count %></p>
+    <p><small>Squawks</small><br /><%= user.squawks.count %></p>
   </div>
   <div class="col-xs-4 text-center">
-    <p>Following <%= user.follows.count %></p>
+    <p><small>Following</small> <%= user.follows.count %></p>
   </div>
   <div class="col-xs-4 text-center">
-    <p>Followers <%= user.followers.count %></p>
+    <p><small>Followers</small> <%= user.followers.count %></p>
   </div>
 </div>

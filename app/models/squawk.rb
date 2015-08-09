@@ -1,6 +1,6 @@
 class Squawk < ActiveRecord::Base
   belongs_to :user
-  validates_length_of :body, maximum: 140
+  validates_length_of :body, maximum: 170
   before_save :replace_with_link
 
   def self.timeline(user)
@@ -22,6 +22,5 @@ class Squawk < ActiveRecord::Base
   def get_match
     /~([A-Za-z0-9]+)/.match(self.body)
   end
-
 
 end

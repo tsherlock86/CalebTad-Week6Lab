@@ -23,13 +23,13 @@ Rails.application.routes.draw do
   authenticated :user do
     devise_scope :user do
       root to: "squawks#index", as: :user_timeline
-      get '/signout', to: 'devise/sessions#destroy', as: :signout
+      delete '/signout', to: 'devise/sessions#destroy', as: :signout
     end
   end
 
   unauthenticated do
     devise_scope :user do
-      root to: "static_pages#home"
+      root to: "static_pages#home", to: "devise/sessions#new"
     end
   end
 
