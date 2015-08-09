@@ -18,7 +18,8 @@ gem 'devise'
 gem 'faker', '~> 1.4.3'
 gem 'kaminari'
 gem 'jquery-infinite-pages'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'bourbon'
 
 group :development, :test do
   gem 'byebug'

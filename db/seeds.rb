@@ -8,7 +8,7 @@
               avatar: Faker::Avatar.image,
               bio: Faker::Lorem.sentence(5))
   5.times do
-    user.squawks << Squawk.create(body: Faker::Lorem.sentence(9))
+    user.squawks << Squawk.create(body: Faker::Lorem.sentence(1))
   end
 end
 

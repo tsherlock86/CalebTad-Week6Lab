@@ -1,11 +1,11 @@
 <div class="row top-border">
   <div class="col-lg-3">
-    <%= image_tag squawk.user.avatar, class: "squawk-image" %>
+    <%= image_tag squawk.user.try(:avatar), class: "squawk-image" %>
   </div>
   <div class="col-lg-9">
     <div class="row">
       <span>
-        <%= link_to squawk.user.first_name, profile_view_path(username: squawk.user.username) %>
+        <%= link_to squawk.user.try(:first_name), profile_view_path(username: squawk.user.username) %>
         <span class="light-text">@<%= squawk.user.username %></span>
       </span>
       <h4><%= squawk.body %></h4>
