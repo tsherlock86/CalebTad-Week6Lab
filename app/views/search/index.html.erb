@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <% if @squawks.any? %>
+      <% @squawks.each do |squawk| %>
+        <%= render partial: '/squawks/squawk', locals: { squawk: squawk } %>
+      <% end %>
+    <% else %>
+      <div class="text-center">
+        <h3>Sorry, we couldn't find your stuff :(</h3>
+      </div>
+    <% end %>
+  </div>
+</div>
