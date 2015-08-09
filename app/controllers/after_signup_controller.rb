@@ -23,7 +23,7 @@ class AfterSignupController < ApplicationController
   #     file.write(uploaded_io.read)
   #   end
   # end
-
+  
   def after_signup_params
     params.require(:user).permit(:first_name, :last_name, :username, :avatar)
   end

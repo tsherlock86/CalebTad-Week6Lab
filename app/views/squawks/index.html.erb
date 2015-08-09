@@ -3,11 +3,15 @@
   </div>
 
   <div class="infinite-table">
-    <div class="col-xs-6">
-      <%= render partial: 'squawk', collection: @squawks %>
-      <div class="btn-group">
-      
-    </div>
+    <table>
+      <div class="col-xs-6">
+        <%= render partial: 'squawk', collection: @squawks %>
+      </div>
+    </table>
+    <div class="btn-group">
+      <p class="pagination">
+        <%= link_to_next_page(@squawks, 'Next Page', :remote => true) %>
+      </p>
     </div>
   </div>
 
