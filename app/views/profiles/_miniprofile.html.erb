@@ -21,21 +21,20 @@
 </div>
 
 <div class="row text-center">
-  <!-- Following and unfollowing -->
-  <div class="col-xs-5">
-  <% if current_user.following?(@user) %>
-    <%= button_to "Unfollow", unfollow_path, :class => "btn btn-primary btn-sm", :method => :post %>
-  <% else %>
-    <%= button_to "Follow", follow_path, :class => "btn btn-primary btn-sm", :method => :post %>
-  <% end %>
+  <div class="col-lg-4 col-lg-offset-2">
+    <!-- Following and unfollowing -->
+    <% if current_user.following?(@user) %>
+      <%= button_to "Unfollow", unfollow_path, :class => "btn btn-primary btn-sm", :method => :post %>
+    <% else %>
+      <%= button_to "Follow", follow_path, :class => "btn btn-primary btn-sm", :method => :post %>
+    <% end %>
   </div>
-
-  <div class="col-xs-5 col-xs-offset-1">
-  <!-- Blocking and unblocking -->
-  <% if current_user.blocks.include?(@user) %>
-    <%= button_to "Unblock", unblock_path, :class => "btn btn-primary btn-sm", :method => :post %>
-  <% else %>
-    <%= button_to "Block", block_path, :class => "btn btn-primary btn-sm", :method => :post %>
-  <% end %>
+  <div class="col-lg-4">
+    <!-- Blocking and unblocking -->
+    <% if current_user.blocks.include?(@user) %>
+      <%= button_to "Unblock", unblock_path, :class => "btn btn-primary btn-sm", :method => :post %>
+    <% else %>
+      <%= button_to "Block", block_path, :class => "btn btn-primary btn-sm", :method => :post %>
+    <% end %>
   </div>
 </div>

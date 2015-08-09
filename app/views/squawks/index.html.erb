@@ -1,9 +1,8 @@
-<div class="col-xs-3">
-  <%= render partial: 'homeprofile', locals: { user: current_user } %>
-</div>
+  <div class="col-xs-3">
+    <%= render partial: 'homeprofile', locals: { user: current_user } %>
+  </div>
 
-<div class="infinite-table">
-  <div class="container">
+  <div class="infinite-table">
     <div class="col-xs-6">
       <%= render partial: 'squawk', collection: @squawks %>
       <div class="btn-group">
@@ -11,4 +10,9 @@
     </div>
     </div>
   </div>
-</div>
+
+  <div class="col-xs-3">
+    <% @who_to_follow.each do |user| %>
+      <%= render partial: 'who_to_follow', locals: { user: user } %>
+    <% end %>
+  </div>

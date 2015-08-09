@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'search(/:search_item)' => 'search#index', as: :search
+
   get 'profiles/:username' => 'profiles#index', as: :profile_view
   post 'profiles/:username/follow' => 'profiles#follow', as: :follow
   post 'profiles/:username/unfollow' => 'profiles#unfollow', as: :unfollow
