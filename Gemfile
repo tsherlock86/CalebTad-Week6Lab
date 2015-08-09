@@ -16,7 +16,7 @@ gem "acts_as_follower"
 gem 'wicked'
 gem 'devise'
 gem 'faker', '~> 1.4.3'
-gem 'kaminari'
+gem 'will_paginate', '~> 3.0.6'
 gem 'jquery-infinite-pages'
 gem 'font-awesome-rails'
 gem 'bourbon'

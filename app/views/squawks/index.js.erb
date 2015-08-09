@@ -1,11 +1,9 @@
-// Append new data
-$("<%=j render(:partial => 'squawk', :object => @squawks) %>")
-  .appendTo($(".infinite-table table"));
+// From Rails Casts
 
-// Update pagination link
-<% if @squawks.last_page? %>
-  $('.pagination').html("That's all, folks!");
+$('#squawks').append('<%=j render(@squawks) %>');
+<% if @squawks.next_page %>
+  $('.pagination').replaceWith('<%=j will_paginate(@squawks) %>');
 <% else %>
-  $('.pagination')
-    .html("<%=j link_to_next_page(@squawks, 'Next Page', :remote => true) %>");
+  $('.pagination').text("You've read everything. Go outside.");
 <% end %>
+<% sleep 0.3 %>
