@@ -1,0 +1,9 @@
+// From Rails Casts
+
+$('#squawks').append('<%=j render(@squawks) %>');
+<% if @squawks.next_page %>
+  $('.pagination').replaceWith('<%=j will_paginate(@squawks) %>');
+<% else %>
+  $('.pagination').text("You've read everything. Go outside.");
+<% end %>
+<% sleep 0.3 %>
