@@ -22,6 +22,7 @@ $(document).ready(function() {
   $('.new-squawk').click(function() {
     $('.new-squawk-form').toggle();
     $('.dark-screen').toggle();
+    $('body').toggleClass('no-scroll');
   });
 
 });
