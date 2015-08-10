@@ -50,9 +50,6 @@ GEM
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
     bootstrap_form (2.3.0)
-    bourbon (4.2.3)
-      sass (~> 3.4)
-      thor
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
@@ -127,6 +124,11 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.3)
     railties (4.2.3)
       actionpack (= 4.2.3)
       activesupport (= 4.2.3)
@@ -181,7 +183,6 @@ DEPENDENCIES
   bootstrap-generators
   bootstrap-sass
   bootstrap_form
-  bourbon
   byebug
   coffee-rails (~> 4.1.0)
   devise
@@ -192,6 +193,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.2.3)
+  rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
@@ -200,3 +202,6 @@ DEPENDENCIES
   web-console (~> 2.0)
   wicked
   will_paginate (~> 3.0.6)
+
+BUNDLED WITH
+   1.10.5
