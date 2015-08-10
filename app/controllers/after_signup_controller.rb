@@ -2,9 +2,7 @@ class AfterSignupController < ApplicationController
   include Wicked::Wizard
   steps :username, :avatar
 
-
   #defining the show field for first step
-  #user can only skip on avatar/bio page
   def show
     @user = current_user
     render_wizard
@@ -17,13 +15,6 @@ class AfterSignupController < ApplicationController
     render_wizard @user
   end
 
-  # def upload
-  #   uploaded_io = params[:user][:profile_photo]
-  #   File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-  #     file.write(uploaded_io.read)
-  #   end
-  # end
-  
   def after_signup_params
     params.require(:user).permit(:first_name, :last_name, :username, :avatar)
   end
@@ -31,20 +22,6 @@ class AfterSignupController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :last_name, :username, :avatar)
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   private
 
