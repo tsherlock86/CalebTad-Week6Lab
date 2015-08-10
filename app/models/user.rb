@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   acts_as_follower
 
   def cannot_follow?(user)
-    user.blocks.include?(current_user)
+    user.blocks.include?(user)
   end
 
 end

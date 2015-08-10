@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
   end
 
   def follow
-    if cannot_follow?(@user)
+    if @user.cannot_follow?(@user)
       flash[:error] = "You cannot follow this person."
       redirect_to :back
     else
@@ -29,10 +29,7 @@ class ProfilesController < ApplicationController
     else
       current_user.block(@user)
       flash[:notice] = "You have now blocked #{@user.username}."
-        # Stop following a user that you block
-        if @user.followed_by?(current_user)
-          current_user.stop_following(@user)
-        end
+      # current_user.stop_following(@user)
       redirect_to :back
     end
   end
