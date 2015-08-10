@@ -20,7 +20,7 @@ gem 'faker', '~> 1.4.3'
 gem 'kaminari'
 gem 'jquery-infinite-pages'
 gem 'font-awesome-rails'
-gem 'bourbon'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'

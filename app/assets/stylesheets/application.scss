@@ -16,12 +16,22 @@
 @import "bootstrap";
 @import "profiles";
 @import "font-awesome";
-@import "bourbon";
+
+
+img {
+	height: 100px;
+	width: 100px;
+}
 
 // Sticky footer
 html, body {
 	height: 100%;
 }
+
+.row {
+	margin-right: 0px;
+}
+
 .wrapper {
   min-height: 100%;
 	margin-bottom: -80px;
