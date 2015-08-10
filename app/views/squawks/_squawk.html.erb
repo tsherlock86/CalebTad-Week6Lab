@@ -1,6 +1,6 @@
 <div class="row top-border">
   <div class="col-lg-3">
-    <%= image_tag squawk.user.try(:avatar), class: "squawk-image" %>
+    <img src="<%= user.avatar %>" onerror="this.src='<%=image_path("image1.jpg")%>';" alt="Missing Image">
   </div>
   <div class="col-lg-9">
     <div class="row">
