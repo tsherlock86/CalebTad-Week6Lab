@@ -29,7 +29,7 @@ class ProfilesController < ApplicationController
     else
       current_user.block(@user)
       flash[:notice] = "You have now blocked #{@user.username}."
-      # current_user.stop_following(@user)
+      current_user.stop_following(@user)
       redirect_to :back
     end
   end
