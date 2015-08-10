@@ -4,7 +4,7 @@ class SquawksController < ApplicationController
   # GET /squawks
   # GET /squawks.json
   def index
-    @squawks = Squawk.timeline(current_user).paginate(:page => params[:page])
+    @squawks = Squawk.timeline(current_user)
     @who_to_follow = User.all.sample(3)
   end
 
@@ -26,6 +26,7 @@ class SquawksController < ApplicationController
   # squawk /squawks.json
   def create
     @squawk = Squawk.new(squawk_params)
+    current_user.squawks << @squawk
 
     respond_to do |format|
       if @squawk.save
@@ -70,6 +71,6 @@ class SquawksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def squawk_params
-      params.require(:squawk).permit(:body, :user_id)
+      params.require(:squawk).permit(:body)
     end
 end
