@@ -18,9 +18,10 @@
 $(document).ready(function() {
 
   // New squawk form
-  $('.new-squawk-form').hide();
+
   $('.new-squawk').click(function() {
     $('.new-squawk-form').toggle();
+    $('.dark-screen').toggle();
   });
 
 });
