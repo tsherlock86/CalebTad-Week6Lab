@@ -8,7 +8,7 @@
               avatar: Faker::Avatar.image,
               bio: Faker::Lorem.sentence(5))
 
-  5.times do
+  1000.times do
     squawk = Squawk.create(body: Faker::Lorem.sentence(5))
     squawk.created_at = Faker::Time.between(1000.days.ago, DateTime.now)
     user.squawks << squawk
