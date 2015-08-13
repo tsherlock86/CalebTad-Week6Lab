@@ -24,9 +24,9 @@
   <div class="col-lg-4 col-lg-offset-2">
     <!-- Following and unfollowing -->
     <% if current_user.following?(@user) %>
-      <%= button_to "Unfollow", unfollow_path, :class => "btn btn-primary btn-sm", :method => :post %>
+      <%= button_to "Unfollow", unfollow_path, :class => "btn btn-primary btn-sm", :method => :post, :remote => true %>
     <% else %>
-      <%= button_to "Follow", follow_path, :class => "btn btn-primary btn-sm", :method => :post %>
+      <%= button_to "Follow", follow_path, :class => "btn btn-primary btn-sm", :method => :post, :remote => true %>
     <% end %>
   </div>
   <div class="col-lg-4">
